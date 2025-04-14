@@ -1,0 +1,257 @@
+/* Animations */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 1s ease forwards;
+  opacity: 0;
+}
+.fade-in-delay-1 { animation-delay: 0.2s; }
+.fade-in-delay-2 { animation-delay: 0.4s; }
+.fade-in-delay-3 { animation-delay: 0.6s; }
+
+
+
+
+/* Base */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #0e1a2b; /* Bleu nuit */
+  color: #ffffff; /* Texte blanc */
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 12px;
+  font-size: 16px;
+}
+
+li i {
+  color: #1d4ed8;
+  margin-right: 8px;
+  transition: transform 0.3s;
+}
+
+li:hover i {
+  transform: scale(1.2);
+}
+
+/* Header */
+header {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background-color: #091423;
+  color: #ffffff;
+  border-bottom: 2px solid #1c2d44;
+}
+
+.logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-right: 15px;
+  border: 2px solid #ffffff;
+}
+
+.slogan {
+  text-align: center;
+  font-style: italic;
+  color: #cccccc;
+  margin-bottom: 20px;
+}
+
+/* Section Hero */
+.hero {
+  background: linear-gradient(to right, #4b6cb7, #182848);
+  color: white;
+  padding: 50px 20px;
+  text-align: center;
+  border-radius: 20px;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.hero p {
+  font-size: 1.2rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+/* Avantages, Services, Bénéfices, Contact */
+.avantages, .services, .benefits, .contact {
+  background-color: #112233;
+  padding: 40px 20px;
+  margin: 20px 0;
+  border-radius: 10px;
+  color: #ffffff;
+}
+
+.avantages h2, .services h3, .benefits h3, .contact h2 {
+  color: #00aaff;
+  margin-bottom: 20px;
+}
+
+.avantages ul li,
+.services ul li,
+.benefits ul li {
+  font-size: 1.1rem;
+  margin: 10px 0;
+}
+
+/* Formulaire de contact */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input, textarea {
+  background-color: #0e1a2b;
+  color: #ffffff;
+  border: 1px solid #445566;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 500px;
+}
+
+/* Bouton */
+button {
+  background-color: #00aaff;
+  color: #000000;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #0090dd;
+  transform: scale(1.05);
+}
+
+/* Section About en mode sombre */
+.about {
+  background-color: #0e1a2b;
+  padding: 60px 20px;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  color: #ffffff;
+}
+
+.about h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #00aaff;
+}
+
+.about h2 span {
+  color: #ffffff;
+}
+
+.about p {
+  font-size: 1.1em;
+  line-height: 1.8;
+  color: #d1d5db;
+}
+
+/* Footer */
+footer {
+  background-color: #0a1322;
+  color: #cccccc;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  border-top: 2px solid #1f2f40;
+}
+
+/* Réseaux sociaux */
+.social-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.social-links li {
+  margin: 10px 0;
+}
+
+.social-links a {
+  text-decoration: none;
+  font-size: 1.2em;
+  color: #00aaff;
+  transition: color 0.3s;
+}
+
+.social-links a:hover {
+  color: #0077ff;
+}
+
+.social-links i {
+  margin-right: 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.8em;
+  }
+
+  .hero h2,
+  .avantages h2,
+  .contact h2,
+  .services h3,
+  .about h2 {
+    font-size: 1.5em;
+  }
+
+  .about p,
+  .hero p,
+  .services li,
+  .avantages li {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 480px) {
+  header .logo {
+    width: 80px;
+  }
+
+  header h1 {
+    font-size: 1.5em;
+  }
+
+  .about p,
+  .services li,
+  .avantages li {
+    font-size: 0.95em;
+  }
+
+  .hero h2 {
+    font-size: 1.4em;
+  }
+}
